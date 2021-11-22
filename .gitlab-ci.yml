@@ -18,7 +18,7 @@ stages:
 lint:
   stage: lint
   before_script:
-    - apt-get -y install python3-pip && pip install cpplint
+    - apt -y update && apt-get -y install python-pip && pip install cpplint
   script:
     - cpplint game_of_life.c
 
